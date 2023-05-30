@@ -28,6 +28,7 @@ const App = () => {
   const [synscore, setSynscore] = useState(0);
   const [score, setScore] = useState(0);
   
+  
   console.log(user);
 
   const getAntonyms = () => {
