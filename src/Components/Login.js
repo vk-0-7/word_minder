@@ -39,7 +39,7 @@ const Login = ({ setLoginUser }) => {
         <h2>Login</h2>
         <input
           type="text"
-          placeholder="Your Email"
+          placeholder="your Email"
           className="email"
           name="email"
           value={user.email}
@@ -56,7 +56,7 @@ const Login = ({ setLoginUser }) => {
         />{" "}
         <br />
         <button className="loginButton" onClick={login}>
-          Login
+          login
         </button>
       </div>
     </div>

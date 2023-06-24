@@ -36,9 +36,6 @@ html{
     margin: 9px;
 }
 
-
-
-
 .navbarList {
     display: flex;
     flex-direction: row;
@@ -59,7 +56,7 @@ html{
 .navbar a {
     text-decoration: none;
     
-    color: rgb(40, 6, 88);
+    color: rgb(0, 0, 0) !important;
 }
 
 .navbarList li {
@@ -71,7 +68,7 @@ html{
 
 .navbarList li:hover{
     
-    color: rgb(9, 22, 34);
+    color: rgb(0, 0, 0) !important;
    
 }
 
@@ -109,6 +106,13 @@ html{
     color: rgb(33, 33, 34);
     padding-inline: 8px;
     border-radius: 7px;
+}
+
+.dashboard{
+    padding: 5px 5px;
+    border: 1px solid grey;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 

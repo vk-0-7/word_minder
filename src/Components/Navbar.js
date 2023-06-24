@@ -4,13 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {  faBars,faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import logo from "../image/logo12.png";
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Navbar = ({ user, setLoginUser }) => {
-
+ console.log(user)
 const navRef=useRef();
-
+const navigate=useNavigate();
 
 const showNavBar=() =>{
     navRef.current.classList.toggle('responsive_Nav')
@@ -72,7 +73,7 @@ const showNavBar=() =>{
               <li> Home </li>
             </Link>
             <a href="#Courses">
-              <li> Courses </li>
+              <li> Reviews </li>
             </a>
             <a href="#Contact">
               <li> Contact </li>
@@ -95,7 +96,8 @@ const showNavBar=() =>{
           ) : (
             <div className="username_logout">
               {" "}
-              <p id="afterLogin"> Hello {user.username} </p>
+              { (user.email!='admin123@gmail.com' && user.password != 'admin123') ?<p id="afterLogin"> Hello {user.username} </p>:
+              <button className="dashboard"onClick={()=>navigate('/dashboard')} >Dashboard</button> }
               <button
                 id="afterLogin"
                 className="logoutButton"

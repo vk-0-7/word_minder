@@ -5,6 +5,9 @@ import axios from "axios";
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
+import Dashboard from "./Components/Admin/Dashboard";
+import AdminAntonyms from '../src/Components/Admin/adminAntonyms'
+import AdminSynonyms from '../src/Components/Admin/adminSynonyms'
 import Login from "./Components/Login";
 import Register from "./Components/Register";
 import Quizantonyms from "./Components/quiz/Quizantonyms";
@@ -135,7 +138,9 @@ const App = () => {
             <Login setLoginUser={setLoginUser} />
           )}/>
           
-       
+          <Route exact path="/dashboard" element={<Dashboard/>}/>
+          <Route exact path="/adminAntonyms" element={<AdminAntonyms/>}/>
+          <Route exact path="/adminSynonyms" element={<AdminSynonyms/>}/>
       </Routes>
     </>
   );

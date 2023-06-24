@@ -13,14 +13,14 @@ const Contact = () => {
           <h5>Privacy Policy</h5>
           <h5>Call us</h5>
           </div>
-          <div className="col-2" id='col'>
+          {/* <div className="col-2" id='col'>
               <h2>Recent Courses</h2> 
                <h5> Web Development</h5>
                <h5> Programming </h5>
                <h5> Data Structure</h5>
                <h5> Mobile Development</h5>
                <h5> Database</h5>
-          </div>
+          </div> */}
           <div className="col-3" id='col'>
               <h2>Have a Question?</h2>
               <h5>	203 Fake St. Mountain View,Mumbai , India </h5>
@@ -40,7 +40,7 @@ const Contact = () => {
 
       </div>
          <div className="copyright">
-            <h6>Copyright 2022 All rights reserved | Made with ❤ by vivek</h6> 
+            <h6>Copyright 2022 All rights reserved | Made by vivek </h6> 
          </div>
     </div>
   )

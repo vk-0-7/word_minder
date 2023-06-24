@@ -12,8 +12,8 @@ const Courses = () => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
       {
@@ -50,9 +50,8 @@ const Courses = () => {
   <div id="Courses">
      
      <div className="heading">
-          <p>Popular Courses  <br />
-         Available Right Now</p>
-         <h4>Get the Best Courses at Best Prices. You Can get Upto <span>50% discount .</span>  <span>Hurry Up !</span> </h4>
+        
+         <h4>What users say about us</h4>
      </div>
 
    <div className='inner-course'>
@@ -60,13 +59,13 @@ const Courses = () => {
      {Coursesdata.map((item) =>(
         <div className="card" >
 
-     <Link style={{ textDecoration: 'none' }} >  <div  className="card-top">
+       <div  className="card-top">
           <img src={item.Imglink} alt={item.title} /> 
             <h1 >{item.title}</h1>
-            </div>  </Link> 
+            </div>  
           <div className="card-bottom">
-           <h3 >{item.price}</h3>
-           <p>{item.category}</p> </div>
+           <p >{item?.description}</p>
+           </div>
         </div> 
       
 ) )}

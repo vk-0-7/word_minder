@@ -1,0 +1,31 @@
+.left_filter{
+   
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    width: 150px;
+    background-color: rgb(171, 205, 234);
+}
+.left_filter p{
+    border-bottom: 1px solid rgb(113, 108, 108);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(192, 208, 222);
+    height: 60px;
+    width: 100%;
+   margin: 0;
+   font-size: 15px;
+   cursor: pointer;
+   
+}
+.left_filter p:hover{
+    background-color: white;
+    color: black;
+}
+.left_filter a{
+    /* border: 1px solid red; */
+    height: 60px;
+    text-decoration: none;
+    color: black;
+}

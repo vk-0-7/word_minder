@@ -1,0 +1,233 @@
+
+.input input{
+    height: 50px;
+    width: 250px;
+    border-radius: 8px;
+    border: 1px solid black;
+    font-size: 1.3rem;
+    padding-inline: 10px;
+    
+}
+.input span{
+  /* border: 1px solid red; */
+  font-size: 1.5rem;
+  margin: 8px;
+  padding: 10px;
+  font-weight: bold;
+  font-family: 'Inter Tight', sans-serif;
+}
+.col{
+  margin: 30px;
+}
+.col button{
+   width: 70px;
+   padding: 5px;
+   margin-inline:10px;
+   font-size: 1.4rem;
+   border: 1px solid blue;
+   background-color: rgb(123, 123, 168);
+   border-radius: 10px;
+}
+.suggest{
+  width: max-content;
+  height: max-content;
+  /* padding: 10px; */
+  position: absolute;
+  top: 8rem;
+  right: 2px;
+  border-radius: 5px;
+  background-color: rgb(99, 96, 96);
+  /* border: 1px solid red; */
+}
+
+#item{
+ 
+  
+ 
+
+  color: white;
+ list-style-type: none;
+ text-align: center;
+  width: 20vw;
+  font-size: 1.5rem;
+  cursor: pointer;
+  /* border: 1px solid red; */
+}
+.suggest button{
+  border: none;
+ color: black;
+ background-color:  rgb(99, 96, 96);
+
+}
+
+
+.new_table{
+    border: 1px solid red;
+  width: 50vw;
+  
+  margin:  80px auto ;
+ 
+
+}
+.table_heading{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+   
+}
+.table_heading h3{
+    height: 40px;
+   width: 25vw;
+    border: 1px solid blue;
+    text-align: center;
+}
+.table_body{
+    width: 55vw;
+}
+.table_body span{
+    display: flex;
+}
+
+.table_body p{
+    margin: 0px;
+    border: 1px solid black;
+    height: 40px;
+    width: 25vw;
+    text-align: center;
+    font-size: 22px;
+}
+.table_content{
+    display: flex;
+    
+}
+.table_icons{
+    width: 10vw;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+}
+.table_icons svg{
+   cursor: pointer !important;
+}
+
+
+
+
+@media (max-width:850px){
+   
+     
+.input input{
+  height: 42px;
+  width: 150px;
+ 
+  font-size: 1.2rem;
+  
+}
+.col{
+  margin: 3px;
+}
+
+.input span{
+  font-size: 1.3rem;
+  margin: 6px;
+  padding: 7px;
+
+}
+
+
+table{
+  width: 400px;
+  text-align: center;
+}
+}
+
+
+
+@media (max-width:700px){
+   
+     
+.input input{
+  height: 35px;
+  width: 120px;
+ font-size: 1.2rem;
+  
+}
+
+.input span{
+  font-size: 1.2rem;
+  margin: 4px;
+  padding: 5px;
+ 
+}
+
+
+.table{
+  width: 410px;
+ margin: 70px auto;
+}
+.col{
+  margin: 2px;
+}
+.col button{
+  width: 60px;
+  padding: 3px;
+  margin-inline:5px;
+  font-size: 1.3rem;
+  
+}
+
+th{
+  font-size: 1.5rem;
+  padding: 9px;
+  
+
+}
+td{
+  font-size: 1.4rem;
+  padding: 9px;
+}
+}
+@media (max-width:500px){
+   
+     
+.input input{
+  height: 33px;
+  width: 200px;
+  font-size: 1.05rem;
+  margin: 8px 17px 0px 22px;
+  
+}
+
+.input span{
+  font-size: 1.04rem;
+  margin: 20px 0px 0px 6px;
+  padding: 4px;
+ 
+}
+
+
+.table{
+ width: 350px;
+ margin: 50px auto;
+}
+.col button{
+  height: 35px;
+  width: 110px;
+  padding-inline: 3px;
+  margin-inline: 4px;
+  font-size: 1.1rem;
+  margin: 25px 39px 0px 1px
+}
+
+th{
+  font-size: 1.3rem;
+  padding: 8px;
+  
+
+}
+td{
+  font-size: 1.2rem;
+  padding: 8px;
+}
+}

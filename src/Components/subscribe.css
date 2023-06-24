@@ -1,0 +1,142 @@
+.main_page {
+
+    height: 23rem;
+    width: 47vw;
+    padding: 3rem 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #201315;
+    border-radius: 30px;
+}
+
+.cross {
+    color: white;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer
+}
+
+.main_page h2,
+.join_insta h2 {
+
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+
+}
+
+.join_insta h2 {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+
+}
+
+
+
+.main_body {
+    /* border: 1px solid white; */
+    width: 100%;
+}
+
+.main_page input {
+
+    height: 48px;
+    width: 87%;
+    margin: 10px 0px 0px 30px;
+    background-color: #F8F3EB;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    padding-inline: 20px;
+    border: none;
+
+
+}
+
+.main_page input:focus {
+
+    outline-color: #AF2D3E;
+}
+
+
+.subscribe_btn {
+
+    height: 48px;
+    width: 87%;
+    margin: 25px 0px 0px 30px;
+
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #AF2D3E;
+    color: white;
+    cursor: pointer;
+
+
+}
+
+
+
+.note {
+    /* display: none; */
+    color: rgb(255, 255, 255);
+    margin: 4px 0px 0px 35px;
+}
+
+
+
+
+
+
+@media (max-width:500px) {
+
+    .main_page {
+
+           height: 26rem;
+           width: 90vw;
+           padding: 3rem 1rem;
+
+
+           border-radius: 20px;
+    }
+
+
+    .main_page h2 {
+
+           font-size: 1.3rem;
+           color: white;
+           text-align: center;
+           line-height: 30px;
+
+    }
+
+    .main_page input {
+
+
+           margin: 15px 0px 0px 25px;
+
+           border-radius: 15px;
+           font-size: 1.05rem;
+
+    }
+
+    .btn {
+
+
+           margin: 30px 0px 0px 25px;
+           font-size: 1.05rem;
+
+
+
+    }
+
+
+}
