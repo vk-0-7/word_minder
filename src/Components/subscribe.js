@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../Api/api";
 
-
+const base_url='http://localhost:9000/';
 const Subscribe = ({setIsModalOpen}) => {
   
     const navigate=useNavigate();
@@ -29,9 +29,9 @@ const handlesubscribe=(e)=>{
         axios.post(`${BASE_URL}subscribe`,{email:email}).then((res) =>{
           console.log(res.data.message);
           setIsModalOpen(false)
-        }).catch((err) => console.log(err))
+        }).catch((err) => console.log(err)) 
        } 
-       else{
+       else{ 
         alert("Invalid Input");
        }
 }
