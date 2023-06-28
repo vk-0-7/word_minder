@@ -123,7 +123,7 @@ const App = () => {
           )}/>
          
 
-        <Route exact path="/addantonyms" element={true ? 
+        <Route exact path="/addantonyms" element={user && user._id  ? 
             <Addantonyms user={user}  />
            : 
             <Login setLoginUser={setLoginUser} />
