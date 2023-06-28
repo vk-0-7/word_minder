@@ -86,7 +86,7 @@ const AddSyno=(e) =>{
 
 <div className="input" >
   <input type="text"  name='word' value={Syno.word} onChange={AddSyno} placeholder="eg. Fat" />
-  <button style={{width:"8rem",fontSize:"1rem"}} onClick={handleWord}>Find synonyms</button>
+  <button className='suggest_btn' style={{width:"8rem",fontSize:"1rem"}} onClick={handleWord}>Find synonyms</button>
  
   <input type="text"   name='synonym' value={Syno.synonym} onChange={AddSyno} placeholder="Bulky" />
 </div>

@@ -90,7 +90,7 @@ const AddAntonyms = ({ user }) => {
             value={dictionary.word}
             onChange={addword}
           />
-          <button style={{width:"8rem",fontSize:"1rem"}} onClick={handleWord}>Find antonyms</button>
+          <button  className='suggest_btn'style={{width:"8rem",fontSize:"1rem"}} onClick={handleWord}>Find antonyms</button>
           <input
             type="text"
             placeholder="Thin"
@@ -106,7 +106,8 @@ const AddAntonyms = ({ user }) => {
       </div>
 
      
-     <div className="suggest">{
+     <div className="suggest">
+      {
         suggestAntonyms.map((val,index)=>{
            return(<>
         

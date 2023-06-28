@@ -173,6 +173,12 @@ td{
 }
 @media (max-width:500px){
    
+.suggest_btn{
+  display: none;
+}
+  .suggest{
+    display: none;
+  }
      
 .input input{
   height: 33px;

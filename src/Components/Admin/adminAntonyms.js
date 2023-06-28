@@ -90,7 +90,7 @@ useEffect(() => {
 
   return (
     <>
- {console.log(antData)}
+ {/* {console.log(antData)} */}
      <Dashboard/>
       {/* { console.log(user.email)} */}
       <div class=" col justify-content-center d-flex  ">

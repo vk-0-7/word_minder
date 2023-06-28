@@ -50,7 +50,7 @@ background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, F
    background: black;
    border-radius: 8px;
    overflow: hidden;
-   height: 350px;
+   height: 50vh;
    color: white;
   
    
@@ -89,15 +89,8 @@ border-radius: 50%;
 
 
 
-   .heading > p{
-  
-      font-size: 2.4rem;
-      margin-left: 30px;
-      font-family: 'Alkalami', serif;
-      font-weight: 600;
-   }
    .heading > h4{
-      font-size: 1.4rem;
+      font-size: 28px;
       margin: 10px 30px;
      
       font-weight: 400;

@@ -36,39 +36,11 @@
 }
 
 
-.col-4{
-    
-    margin: 60px auto;
-    height: 80%;
-   /* background-color: aquamarine; */
-    text-align: center;
-   align-items: center;
-    
-    
-}
-
-.col-4 input{
-    padding: 5px;
-    font-family:'Times New Roman', Times, serif;
-    background-color: rgb(167, 164, 164);
-    color: rgb(0, 0, 0);
-    border: 1px solid black;
-    box-shadow: 0px 0px 1px 1px black;
-}
-
-.col-4 > h2{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.6rem;
-    margin: 40px 0px 80px 0px;
-    
-}
-.col-4 button{
-    padding: 4px;
-    background: #2980B9;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  
 
 
-}
+
+
+
 
 .copyright {
     text-align: center;
@@ -77,40 +49,35 @@ background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
     letter-spacing: 1px;
 }
 
-@media(max-width:500px){
+@media(max-width:530px){
 
 
     #Contact{
         height: 100%;
+        padding-bottom: 100px;
        
     }
     .columns{
        
-        display: block;
-        
+        display: flex;
+        justify-content: space-around;
         padding: 10px ;
     }
     
     #col{
-        width: 80%;
-        height: 100%;
-        margin: 60px auto;
+        width: 50vw !important;
+        max-width: 50vw !important;
+       /* border: 1px solid red; */
+        margin: 60px 0px;
         text-align: center;
     }
-    .col-4 {
-        width: 80%; 
+    #col h2{
+        font-size: 24px;
     }
 
-    .col-4 > h2{
-        
-        font-size: 1.6rem;
-        margin: 30px 0px 40px 0px;
-        
+    #col h5{
+        font-size: 15px;
     }
-    .newsletter{
-        display: flex;
-       
-        margin: 0px 0px;
-       
-    }
+
+   
 }

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import Dropdown from 'react-bootstrap/Dropdown';
+// import Dropdown from 'react-bootstrap/Dropdown';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {  faBars,faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
@@ -7,6 +7,9 @@ import logo from "../image/logo12.png";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 const Navbar = ({ user, setLoginUser }) => {
  console.log(user)
@@ -16,10 +19,6 @@ const navigate=useNavigate();
 const showNavBar=() =>{
     navRef.current.classList.toggle('responsive_Nav')
 }
-
-
-
-
 
   return (
     <>
@@ -32,38 +31,26 @@ const showNavBar=() =>{
           </a>
         </div>
 
+     
+      <div className='main_dropdown'>
+
+     <div className="dropdown">
+          <button className="dropdown_btn">Add Words</button>
+          <div className="list_items">
+             <Link to={'/AddAntonyms'}><p> Antonyms</p></Link> 
+             <Link to={'/AddSynonyms'}><p> Synonyms</p></Link> 
+          </div>
+     </div>
+     <div className="dropdown">
+          <button className="dropdown_btn">Take a Quiz</button>
+          <div className="list_items">
+             <Link to={'/quizAntonyms'}><p> Antonyms</p></Link> 
+             <Link to={'/quizSynonyms'}><p> Synonyms</p></Link> 
+          </div>
+     </div>
+
+      </div>
        
-        <div className="dropdownButton">
-        <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  Take a Quiz
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  <Link class="dropdown-item " to="/quizAntonyms">
-                  Antonyms
-                </Link>
-              
-                <Link class="dropdown-item" to="/quizSynonyms">
-                  Synonyms
-                </Link>
-  </div>
-</div>
-        <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  Add a Word
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  <Link class="dropdown-item " to="/AddAntonyms">
-                  Antonyms
-                </Link>
-              
-                <Link class="dropdown-item" to="/AddSynonyms">
-                  Synonyms
-                </Link>
-  </div>
-</div>
-         
-</div>
     
    <navbar className="nav_nav" ref={navRef}>
 
@@ -85,7 +72,7 @@ const showNavBar=() =>{
             <div className="auth_button"  onClick={showNavBar} >
               <Link id="beforeLogin" to="/login">
                 {" "}
-                Log In{" "}
+               Log In {" "}
               </Link>
 
               <Link id="beforeLogin" to="/register">

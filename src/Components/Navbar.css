@@ -44,14 +44,55 @@ html{
 
 }
 
-.dropdownButton{
+.main_dropdown{
+    /* border: 1px solid red; */
     display: flex;
-    z-index: 1000;
-     
+    gap: 20px;
 }
 .dropdown{
-    margin-inline: 5px;
+    position: relative;
 }
+
+.list_items{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    width: 110px;
+    border-radius: 5px;
+    background-color: white;
+
+}
+
+
+.dropdown:hover .list_items{
+    display: grid;
+    place-items: center;
+   
+}
+/* .list_items a{
+    height: fit-content;
+    border: 1px solid red;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+} */
+.list_items p{
+    padding-block: 5px;
+    margin-block: auto;
+    /* border: 1px solid green; */
+}
+
+.dropdown_btn{
+    height: 40px;
+    width: 110px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+
 
 .navbar a {
     text-decoration: none;
@@ -109,6 +150,7 @@ html{
 }
 
 .dashboard{
+    border-radius: 7px;
     padding: 5px 5px;
     border: 1px solid grey;
     color: black;
@@ -135,7 +177,11 @@ html{
 
 @media(max-width: 1055px){
 
-
+    .navbarList li:hover{
+       
+        color: rgb(255, 255, 255) !important;
+       
+    }
 
   .icons{
     margin: 10px;
@@ -145,15 +191,16 @@ html{
   }  
 
    .nav_nav{
+    font-size: 35px;
     z-index: 999;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(143, 169, 223);
-    position: absolute;
+    background-color: rgb(48, 65, 98);
+    position: fixed;
     left: 0px;
     top: 0px;
     align-items: center;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -169,16 +216,36 @@ html{
 
 
 .navbarList{
+    width: 50vw;
+    margin: 0px;
+    /* border: 1px solid red; */
     display: flex;
+    padding: 0;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-
+.navbarList a{
+    
+    margin: 0;
+    width: 100%;
+    /* border: 1px solid blue; */
+    text-align: center;
+}
+li{
+    color: white !important;
+}
 .auth_button{
-    margin-top: 0px;
-    margin-right: -19px;
+    width: 50vw;
+    /* border: 1px solid green; */
+    margin: 0px;
+    /* margin-right: -19px; */
     display: flex;
     flex-direction: column;
+}
+
+.auth_button a{
+    color: white !important;
 }
 .username_logout{
     display: flex;
@@ -190,6 +257,7 @@ html{
     position: absolute;
     right: 10px;
     top: 10px;
+    color: white;
 }
 
 
@@ -209,22 +277,28 @@ html{
         margin: 8px;
     }
 
-    
-.dropdown{
-    
-    height: 30px;
-    width: 95px;
-    
-}
+    .dropdown_btn{
+        padding-inline: 3px;
+        height: 32px;
+        width: 85px;
+        border: none;
+        border-radius: 5px;
+        font-size: 13px;
+    }
 
-    .dropdown button{
-        /* border: 2px solid blue; */
-        height: 30px;
-        font-size: 0.9rem;
-        
-        width: 100%;
-    } 
-   
+    .list_items{
+        display: none;
+        position: absolute;
+        top: 32px;
+        font-size: 13px;
+        left: 0px;
+        width: 85px;
+        border-radius: 5px;
+        background-color: white;
+    
+    }
+
+  
 
     .mobile_icon{
         height: 25px;
@@ -232,6 +306,29 @@ html{
         margin: 5px;
     }
 }
+.username_logout{
+    margin: 0px;
+    width: 50vw;
+    /* border: 1px solid red; */
+}
+
+.dashboard{
+    height: 50px;
+    width: 120px;
+    font-size: 20px;
+    background-color: rgb(164, 199, 239);
+    padding: 3px 3px;
+    border: 1px solid grey;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.logoutButton{
+    margin-top: 10px;
+    height: 50px;
+    width: 120px;
+    font-size: 20px;
+}
+
 @media  (max-width:450px){
 
     .logo {
@@ -247,32 +344,9 @@ html{
     }
 
     
-   .dropdown{
-    margin-inline: 2px;
-    height: 25px;
-    width: 93px;
-    padding: 0px 0px 2px 0px;
-    margin: 0px 0px 9px 4px;
-    
-}
+ 
 
-.dropdown-menu  {
-    /* border: 1px solid red; */
-    width: 10px;
-    
-}
 
-.dropdown-item{
-    font-size: 0.8rem;
-}
-
-    .dropdown button{
-        /* border: 2px solid blue; */
-       
-        font-size: 0.75rem;
-        
-        width: 100%;
-    } 
    
 
     .mobile_icon{
