@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Courses.css'
 import { Link } from "react-router-dom";
-import  {Coursesdata} from '../Data/data' 
+import  {Coursesdata} from '../Data/data.js' 
 
 const Courses = () => {
 

@@ -125,12 +125,15 @@ html{
     margin-top: 10px;
     margin-right: 19px;
     align-items: center;
+    /* border: 1px solid black; */
 }
 .username_logout{
     display: flex;
     margin-top: 11px;
     margin-right: 10px;
     align-items: center;
+    width: 20vw;
+    border: 1px solid red;
     
 }
 
