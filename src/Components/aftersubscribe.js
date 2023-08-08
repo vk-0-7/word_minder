@@ -44,7 +44,7 @@ const AfterSubscribe = (setAfterSubscribeModal) => {
          You have subscribe Here.  <br />
          Checkout new Test of this week.
         </h2>
-   <Link to={'https://adminwordminder.vercel.app/'}> <button className="click_btn">Check Now</button></Link>
+   <Link to={'https://wordminderadmin.vercel.app/'}> <button className="click_btn">Check Now</button></Link>
       </div>
     </div>
     
