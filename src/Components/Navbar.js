@@ -32,7 +32,7 @@ const Navbar = ({ user, setLoginUser }) => {
         </div>
 
 
-        <div className='main_dropdown'>
+        {/* <div className='main_dropdown'>
 
           <div className="dropdown">
             <button className="dropdown_btn">Add Words</button>
@@ -49,7 +49,7 @@ const Navbar = ({ user, setLoginUser }) => {
             </div>
           </div>
 
-        </div>
+        </div> */}
 
 
         <navbar className="nav_nav" ref={navRef}>
