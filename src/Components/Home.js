@@ -50,7 +50,7 @@ const Home = ({ user }) => {
 
             }
             {
-                afterSubscribeModal && <AfterSubscribe afterSubscribeModal={afterSubscribeModal} setAfterSubscribeModal={setAfterSubscribeModal} />
+                afterSubscribeModal && <AfterSubscribe setAfterSubscribeModal={setAfterSubscribeModal} />
             }
 
 

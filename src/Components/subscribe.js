@@ -3,16 +3,21 @@ import './subscribe.css'
 import { RxCross2 } from 'react-icons/rx'
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
-import { BASE_URL } from "../Api/api";
+import CircularProgress from '@mui/joy/CircularProgress';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import { BASE_URL, BASE__URL } from "../Api/api";
 import AfterSubscribe from "./aftersubscribe";
 
 
-const Subscribe = ({ setIsModalOpen,afterSubscribeModal ,setAfterSubscribeModal}) => {
+const Subscribe = ({ setIsModalOpen, afterSubscribeModal, setAfterSubscribeModal }) => {
 
   const navigate = useNavigate();
   const [emailerror, setEmailError] = useState("");
   const [email, setEmail] = useState();
- 
+  const [isbtnLoading, setIsBtnLoading] = useState(false);
+
   //   const [btnLoader, setBtnLoader] = useState(false);
   //   const [color, setColor] = useState("#ffffff");
 
@@ -26,16 +31,22 @@ const Subscribe = ({ setIsModalOpen,afterSubscribeModal ,setAfterSubscribeModal}
 
   const handlesubscribe = (e) => {
     // e.preventDefault();
-
+    setIsBtnLoading(true)
     if (email) {
       axios.post(`${BASE_URL}subscribe`, { email: email }).then((res) => {
-        console.log(res.data.message);
+        console.log(res.status);
+        setIsBtnLoading(false)
         setIsModalOpen(false)
         setAfterSubscribeModal(true)
-      }).catch((err) => console.log(err))
+      }).catch((err) => { console.log(err)
+        //  alert("already subscribed")
+        toast.error("You are already Subscibed");
+         setIsBtnLoading(false)
+      })
     }
     else {
-      alert("Invalid Input");
+      setIsBtnLoading(false)
+      toast.error("Enter Email First")
     }
   }
 
@@ -90,7 +101,7 @@ const Subscribe = ({ setIsModalOpen,afterSubscribeModal ,setAfterSubscribeModal}
         width: "100vw",
         top: "0",
         left: "0",
-        zIndex: "1000",
+        zIndex: "900",
         backgroundColor: "rgba(0,0,0,0.3)",
       }}
     >
@@ -130,13 +141,20 @@ const Subscribe = ({ setIsModalOpen,afterSubscribeModal ,setAfterSubscribeModal}
             </div>
           )}
           <button className='subscribe_btn' onClick={handlesubscribe} >
-
-            <span> Subscribe</span>
-
+            {isbtnLoading ? <CircularProgress size="sm" /> :
+              <span> Subscribe</span>
+            }
           </button>{" "}
         </div>
       </div>
-    { afterSubscribeModal && <AfterSubscribe setAfterSubscribeModal={setAfterSubscribeModal}/>}
+      {afterSubscribeModal && <AfterSubscribe setAfterSubscribeModal={setAfterSubscribeModal} />}
+
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        theme="dark"
+      />
     </div>
   );
 };
