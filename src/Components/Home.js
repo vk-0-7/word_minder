@@ -68,9 +68,9 @@ const Home = ({ user }) => {
 
 
          { subscribeModal &&  <div className="subscribe">
-              <div ><RxCross2 className='cross' onClick={()=>setSubscribeModal(false)} /></div>
+              <div ><RxCross2 className='cross_btn' onClick={()=>setSubscribeModal(false)} /></div>
 
-              <span> <h4>Want to receive daily words ? </h4> <button onClick={() => setIsModalOpen(true)}>Subscribe Here</button></span> 
+              <span> <h4>Want to receive daily words ? </h4> <button onClick={() => setIsModalOpen(true)}>Subscribe</button></span> 
 
                <span><h4>Already Subscribed.Check This Week's New Test  </h4>
               <Link to='https://wordminderadmin.vercel.app'> <button >Check Now</button></Link> 
