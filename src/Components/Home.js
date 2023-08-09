@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import './Home.css'
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import image1 from '../image/image1.png';
 import Courses from './Courses';
 import Contact from './Contact';
@@ -7,12 +9,23 @@ import About from './About';
 import Subscribe from './subscribe';
 import AfterSubscribe from './aftersubscribe';
 import study from '../image/study.jpg'
+import { RxCross2 } from 'react-icons/rx'
 
 
 const Home = ({ user }) => {
-
+    const navigate=useNavigate()
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [subscribeModal, setSubscribeModal] = useState(false);
     const [afterSubscribeModal, setAfterSubscribeModal] = useState(false);
+
+  useEffect(() => {
+    setTimeout(()=>{
+        setSubscribeModal(true)
+ },5000)
+  }, [])
+  
+  
+
 
     return (
         <div>
@@ -22,7 +35,7 @@ const Home = ({ user }) => {
                     <img src={image1} alt=" not found" />
                 </div>
                 <div className="intro">
-                    <p>A Unique  and Creative educational Platform to improve English Grammer. </p>
+                    <p>A Unique  and Creative educational Platform to Improve English Vocabulary. </p>
                 </div>
                 {/* <div className="intro2">
           <h5>  A Unique and creative educational platform to enhance english grammer.</h5> 
@@ -54,9 +67,15 @@ const Home = ({ user }) => {
             }
 
 
-            <div className="subscribe">
-                <p>Want to receive daily words ? </p> <button onClick={() => setIsModalOpen(true)}>Subscribe Here</button>
-            </div>
+         { subscribeModal &&  <div className="subscribe">
+              <div ><RxCross2 className='cross' onClick={()=>setSubscribeModal(false)} /></div>
+
+              <span> <h4>Want to receive daily words ? </h4> <button onClick={() => setIsModalOpen(true)}>Subscribe Here</button></span> 
+
+               <span><h4>Already Subscribed.Check This Week's New Test  </h4>
+              <Link to='https://wordminderadmin.vercel.app'> <button >Check Now</button></Link> 
+               </span> 
+            </div>}
 
 
 

@@ -32,8 +32,8 @@ html{
 }
 
 .reviser{
-    font-size: 1.7rem;
-    margin: 9px;
+    font-size: 30px;
+    margin:9px 15px;
 }
 
 .navbarList {
@@ -228,6 +228,13 @@ html{
     align-items: center;
     justify-content: center;
 }
+.navbarList li{
+    font-size: 19px;
+}
+
+.auth_button a{
+   font-size: 19px;
+}
 .navbarList a{
     
     margin: 0;
@@ -320,6 +327,13 @@ li{
     width: 50vw;
     /* border: 1px solid red; */
 }
+.navbarList li{
+     font-size: 19px;
+}
+
+.auth_button a{
+    font-size: 19px;
+}
 
 .dashboard{
     height: 50px;
@@ -349,15 +363,10 @@ li{
 
     .reviser{
         font-size: 1.30rem;
-        margin: 0px 0px 0px 0px;
+        margin: 0px 10px 0px 10px;
     }
 
     
- 
-
-
-   
-
     .mobile_icon{
         height: 24px;
         width: 23px;
