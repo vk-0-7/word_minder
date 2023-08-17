@@ -35,7 +35,11 @@ const Home = ({ user }) => {
                     <img src={image1} alt=" not found" />
                 </div>
                 <div className="intro">
-                    <p>A Unique  and Creative educational Platform to Improve English Vocabulary. </p>
+                    <h1>A Unique  and Creative educational Platform to Improve English Vocabulary. </h1>
+                    <div className="home_btn">
+                        <button onClick={() => setIsModalOpen(true)}>Subscribe</button>
+                        <Link to='https://wordminderadmin.vercel.app'> <button >Weekly Quiz</button></Link> 
+                    </div>
                 </div>
                 {/* <div className="intro2">
           <h5>  A Unique and creative educational platform to enhance english grammer.</h5> 
@@ -67,7 +71,7 @@ const Home = ({ user }) => {
             }
 
 
-         { subscribeModal &&  <div className="subscribe">
+         {/* { subscribeModal &&  <div className="subscribe">
               <div ><RxCross2 className='cross_btn' onClick={()=>setSubscribeModal(false)} /></div>
 
               <span> <h4>Want to receive daily words ? </h4> <button onClick={() => setIsModalOpen(true)}>Subscribe</button></span> 
@@ -75,7 +79,7 @@ const Home = ({ user }) => {
                <span><h4>Already Subscribed.Check This Week's New Test  </h4>
               <Link to='https://wordminderadmin.vercel.app'> <button >Check Now</button></Link> 
                </span> 
-            </div>}
+            </div>} */}
 
 
 

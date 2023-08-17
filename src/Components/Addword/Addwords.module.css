@@ -1,0 +1,67 @@
+.main_box{
+  height: fit-content;
+  min-height: 100vh;
+  width: 100%;
+  padding: 10vh 10vw;
+  background-color: rgb(209, 250, 249);
+}
+.input_boxes{
+    height: 40vh;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid red;
+    padding: 5vh 5vw;
+    display: flex;
+    gap: 3vw;
+}
+.input_boxes input{
+  width: 20vw;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-inline: 10px;
+  font-size: 15px;
+}
+.input_boxes button{
+  height: 40px;
+  width: 150px;
+  border: 1px solid white;
+  background-color: rgb(3, 1, 0);
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  display: flex;
+  gap: 0.5vw;
+  justify-content: center;
+  align-items: center;
+}
+.input_boxes button svg{
+  margin-top: 5px;
+}
+
+.list{
+  
+  color: white;
+  text-align: center;
+  height: fit-content;
+  display: grid;
+  width: 150px;
+}
+.list p{
+  border-top: 1px solid white;
+  cursor: pointer;
+  height: 32px;
+  width: 100%;
+  background-color: black;
+  margin: 0;
+  font-size: 15px;
+  place-self: center;
+}
+
+.svgs svg{
+      height: 43px;
+      width: auto;
+      cursor: pointer;
+}

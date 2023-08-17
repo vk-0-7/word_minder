@@ -21,14 +21,16 @@ const Login = ({ setLoginUser }) => {
   };
 
   const login = () => {
-    // const {email,password} =user
+   try {
     axios.post(`${BASE_URL}login`, user).then((res) => {
       alert(res.data.message);
-      
-
       setLoginUser(res.data.user);
-     navigate('/')
+      navigate('/')
     });
+   } catch (error) {
+     console.log("error logging in",error)
+   }
+   
   };
 
   return (

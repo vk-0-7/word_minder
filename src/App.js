@@ -10,10 +10,10 @@ import AdminAntonyms from '../src/Components/Admin/adminAntonyms'
 import AdminSynonyms from '../src/Components/Admin/adminSynonyms'
 import Login from "./Components/Login";
 import Register from "./Components/Register";
-import Quizantonyms from "./Components/quiz/Quizantonyms";
+import Quizwords from "./Components/quiz/Quizwords";
 import Quizsynonyms from "./Components/quiz/Quizsynonyms";
-import Addantonyms from "./Components/Addword/AddAntonyms";
-import Addsynonyms from "./Components/Addword/AddSynonyms";
+import Addwords from "./Components/Addword/Addwords";
+// import Addsynonyms from "./Components/Addword/AddSynonyms";
 import Result from "./Components/quiz/Result";
 import Resultsyno from "./Components/quiz/Resultsyno";
 import { BASE_URL } from "./Api/api";
@@ -32,32 +32,34 @@ const App = () => {
   const [score, setScore] = useState(0);
   
   
-  console.log(user);
+  // console.log(user);
 
-  const getAntonyms = () => {
-    axios.get(`${BASE_URL}getantonyms`).then((response) => {
-      setAntData(response.data);
-    });
-  };
+  // const getAntonyms = () => {
+  //   axios.get(`${BASE_URL}getantonyms`).then((response) => {
+  //     setAntData(response.data);
+  //   });
+  // };
 
-  useEffect(() => {
-    getAntonyms();
-  }, []);
+  // useEffect(() => {
+  //   getAntonyms();
+  // }, []);
 
 
-  const getSynonyms=()=>{
-    axios.get(`${BASE_URL}getsynonyms`)
-       .then((response) =>{
-         const data=response.data
-         setSynData(data)
-        //  console.log(data);
-        })
-    }
+  // const getSynonyms=()=>{
+  //   axios.get(`${BASE_URL}getsynonyms`)
+  //      .then((response) =>{
+  //        const data=response.data
+  //        setSynData(data)
+  //       //  console.log(data);
+  //       })
+  //   }
   
-      useEffect(() =>{
-       getSynonyms();
+  //     useEffect(() =>{
+  //      getSynonyms();
        
-      },[])
+  //     },[])
+
+
   return (
     <>
       
@@ -77,11 +79,11 @@ const App = () => {
         <Route exact path="/register" element={<Register />} />
          
 
-        <Route exact path="/quizsynonyms" element={user && user._id ? (
+        {/* <Route exact path="/quizsynonyms" element={user && user._id ? (
             <Quizsynonyms 
             user={user}
-            synData={synData}
-            setSynData={setSynData}
+            // synData={synData}
+            // setSynData={setSynData}
             QuestionCount={QuestionCount}
             setQuestionCount={setQuestionCount}
             synscore={synscore}
@@ -89,20 +91,11 @@ const App = () => {
           ) : (
             <Login setLoginUser={setLoginUser} />
           )}/>
-          
+           */}
        
 
-        <Route exact path="/quizantonyms" element= {user && user._id ? (
-            <Quizantonyms
-              user={user}
-              antData={antData}
-              setAntData={setAntData}
-              count={count}
-              setCount={setCount}
-              score={score}
-              setScore={setScore}
-             
-            />
+        <Route exact path="/quizwords" element= {user && user._id ? (
+            <Quizwords />
           ) : (
             <Login setLoginUser={setLoginUser} />
           )}/>
@@ -123,21 +116,22 @@ const App = () => {
           )}/>
          
 
-        <Route exact path="/addantonyms" element={user && user._id  ? 
-            <Addantonyms user={user}  />
+        <Route exact path="/addwords" element={user && user._id  ? 
+            <Addwords user={user}  />
            : 
-            <Login setLoginUser={setLoginUser} />
+           <Addwords user={user}  />
+            // <Login setLoginUser={setLoginUser} />
           }/>
           
         
 
 
-        <Route exact path="/addsynonyms" element={user && user._id ? (
+        {/* <Route exact path="/addsynonyms" element={user && user._id ? (
             <Addsynonyms user={user} setLoginUser={setLoginUser} />
           ) : (
             <Login setLoginUser={setLoginUser} />
           )}/>
-          
+           */}
           <Route exact path="/dashboard" element={<Dashboard/>}/>
           <Route exact path="/adminAntonyms" element={<AdminAntonyms/>}/>
           <Route exact path="/adminSynonyms" element={<AdminSynonyms/>}/>

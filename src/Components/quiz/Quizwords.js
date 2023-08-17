@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 // import axios from "axios";
-import "./QuizAntonyms.css";
+import styles from './Quizwords.module.css';
 import { useNavigate } from "react-router-dom";
 // import Error from "./Error";
 import Quiz from "./Quiz";
 
-const Quizantonyms = ({
+const Quizwords = ({
   user,
   antData,
   setAntData,
@@ -108,4 +108,4 @@ const Quizantonyms = ({
   );
 };
 
-export default Quizantonyms;
+export default Quizwords;

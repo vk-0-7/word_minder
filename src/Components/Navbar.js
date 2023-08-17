@@ -27,57 +27,57 @@ const Navbar = ({ user, setLoginUser }) => {
         <div className="leftNav">
           <img className="logo" src={logo} alt="logo not found" />
           <a href="/" className="reviser">
-            <p> WordMinder </p>{" "}
+             WordMinder {" "}
           </a>
         </div>
 
 
-        {/* <div className='main_dropdown'>
+        <div className='main_dropdown'>
 
           <div className="dropdown">
-            <button className="dropdown_btn">Add Words</button>
-            <div className="list_items">
+           <Link to={'/addwords'}> <button className="dropdown_btn">Add Words</button></Link>
+            {/* <div className="list_items">
               <Link to={'/AddAntonyms'}><p> Antonyms</p></Link>
               <Link to={'/AddSynonyms'}><p> Synonyms</p></Link>
-            </div>
+            </div> */}
           </div>
           <div className="dropdown">
-            <button className="dropdown_btn">Take a Quiz</button>
-            <div className="list_items">
+         <Link to={'/quizwords'}>  <button className="dropdown_btn">Take a Quiz</button></Link> 
+            {/* <div className="list_items">
               <Link to={'/quizAntonyms'}><p> Antonyms</p></Link>
               <Link to={'/quizSynonyms'}><p> Synonyms</p></Link>
-            </div>
+            </div> */}
           </div>
 
-        </div> */}
+        </div>
 
 
         <navbar className="nav_nav" ref={navRef}>
 
 
           <ul className="navbarList" onClick={showNavBar} >
-            <Link to="/">
+            {/* <Link to="/">
               <li> Home </li>
             </Link>
             <a href="#Courses">
               <li> Reviews </li>
-            </a>
-            <a href="#Contact">
+            </a> */}
+            {/* <a href="#Contact">
               <li> Contact </li>
-            </a>
-          </ul>
+            </a> */}
+          
 
 
           {!user._id ? (
-            <div className="auth_button" onClick={showNavBar} >
+            <div className="auth_button">
               <Link id="beforeLogin" to="/login">
                 {" "}
-                Log In {" "}
+               <li>Log In </li> {" "}
               </Link>
 
               <Link id="beforeLogin" to="/register">
                 {" "}
-                Register
+               <li>Register</li> 
               </Link>
             </div>
           ) : (
@@ -95,12 +95,7 @@ const Navbar = ({ user, setLoginUser }) => {
               </button>
             </div>
           )}
-
-
-
-
-
-
+       </ul>
           <button className="cancel_icon icons" onClick={showNavBar} >
             <FontAwesomeIcon className="mobile_icon" icon={faXmark}  >
               {" "}
